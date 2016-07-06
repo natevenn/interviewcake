@@ -13,16 +13,7 @@ class StockPrice
 
       max_profit = [max_profit, potential_profit].max
       min_price = [min_price, current_price].min
-      require "pry"
-      binding.pry
     end
     max_profit
-   #profit_array = []
-   #stock_prices.reverse.each do |num|
-     #stock_prices.each do |num2|
-       #profit_array << num - num2
-     #end
-   #end
-     #profit_array.sort.max
   end
 end
