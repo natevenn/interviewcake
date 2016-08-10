@@ -1,0 +1,27 @@
+class MeetingTimes
+  def self.condense_meeting_times(meetings)
+    counter = 0
+    next_element = counter + 1
+    meeting_ranges = []
+    sorted_meetings = meetings.sort_by do |element|
+      element[0]
+    end
+    sorted_meetings.each_with_index do |element, index|
+      if index == 0
+        range = element
+      elsif element[0] == 2
+        require "pry"
+        binding.pry
+        range << element
+        range.flatten!.sort!
+      end
+    end
+    #while meetings[counter][-1] > meetings[next_element][0]
+      #condense_meetings = meetings[counter] << meetings[next_element]
+      #meetings.delete_at(next_element)
+      #meeting_ranges << condense_meetings.flatten.sort.values_at(0,-1)
+      #counter += 1
+    #end
+      #meeting_ranges
+  end
+end
